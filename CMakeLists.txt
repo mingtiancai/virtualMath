@@ -3,18 +3,24 @@ cmake_minimum_required(VERSION 3.16)
 project(virtualMath VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_AUTOMOC ON)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 6.2 COMPONENTS Quick REQUIRED)
 
 qt_add_executable(appvirtualMath
     main.cpp
+    MyMethod.h
+    MyMethod.cpp
 )
 
 qt_add_qml_module(appvirtualMath
     URI virtualMath
     VERSION 1.0
-    QML_FILES main.qml 
+    QML_FILES main.qml Dia.qml About.qml
+    RESOURCES
+        img/test.png
+        img/VirtualMathLogo.png
 )
 
 set_target_properties(appvirtualMath PROPERTIES
