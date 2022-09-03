@@ -16,7 +16,7 @@ Window {
     }
 
     Image{
-       source: "img/test.png"
+       source: "resource/img/test.png"
        anchors.centerIn: parent
    }
 
@@ -34,11 +34,12 @@ Window {
                 id: mouse_area
                 anchors.fill: parent  // 有效区域
                 onClicked: {
-//                    dia.show()	//另一个qml文件显示
-//                    about.show()
                     myObject.printMsg()
                     console.log(myObject.add(12,33))
                     myObject.getMsg("我是","帅哥")
+//                    dia.show()	//另一个qml文件显示
+                    about.show()
+
                 }
             }
         }
