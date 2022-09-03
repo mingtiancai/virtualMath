@@ -20,7 +20,8 @@ qt_add_qml_module(appvirtualMath
     QML_FILES main.qml Dia.qml About.qml
     RESOURCES
         resource/img/test.png
-        resource/img/VirtualMathLogo.png
+        resource/img/logo.png
+        resource/img/about.png
 )
 
 set_target_properties(appvirtualMath PROPERTIES

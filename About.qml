@@ -7,7 +7,7 @@ Window {
     title: qsTr("About")
 
    Image{
-       source: "resource/img/VirtualMathLogo.png"
+       source: "resource/img/about.png"
        anchors.centerIn: parent
    }
 }
