@@ -1,5 +1,8 @@
 import QtQuick
 import QtQuick.Window
+import QtCore
+import QtQuick.Controls
+import QtQuick.Dialogs
 
 Window {
     width: 640
@@ -15,31 +18,39 @@ Window {
         id:about
     }
 
+    MenuBar{
+        Menu{
+            title: qsTr("&File")
+            MenuItem{
+                text: qsTr("&Open")
+            }
+
+            MenuItem{
+                text: qsTr("&Close")
+                onTriggered: close()
+            }
+        }
+        Menu{
+            title: qsTr("&Edit")
+        }
+
+        Menu{
+            title: qsTr("&View")
+        }
+
+        Menu{
+          title: qsTr("&Help")
+          MenuItem{
+              text: qsTr("&About")
+              onTriggered: about.show()
+          }
+        }
+    }
+
+
     Image{
-       source: "img/test.png"
+       source: "resource/img/test.png"
        anchors.centerIn: parent
    }
 
-   Rectangle {
-            width: 200; height: 100
-            color: "red"
-
-            Text {
-                id: txt
-                text: "show dia"
-                font.pixelSize: 20
-                anchors.centerIn: parent
-            }
-            MouseArea {
-                id: mouse_area
-                anchors.fill: parent  // 有效区域
-                onClicked: {
-//                    dia.show()	//另一个qml文件显示
-//                    about.show()
-                    myObject.printMsg()
-                    console.log(myObject.add(12,33))
-                    myObject.getMsg("我是","帅哥")
-                }
-            }
-        }
 }
