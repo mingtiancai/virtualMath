@@ -5,9 +5,8 @@ import QtQuick.Controls
 import QtQuick.Dialogs
 
 Window {
-    width: 640
-    height: 480
     visible: true
+    visibility:"Maximized"
     title: qsTr("VirtualMath")
 
     Dia{
@@ -36,6 +35,22 @@ Window {
 
         Menu{
             title: qsTr("&View")
+        }
+
+        Menu{
+            title: qsTr("&Search")
+        }
+
+        Menu{
+            title: qsTr("&Run")
+        }
+
+        Menu{
+            title: qsTr("&Debug")
+        }
+
+        Menu{
+            title: qsTr("&Tools")
         }
 
         Menu{
